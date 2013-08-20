@@ -6,9 +6,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="root" alignment="CENTER" prefHeight="200.0" prefWidth="320.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hello.HelloViewController">
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="320.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hello.HelloViewController">
   <children>
-    <TextField fx:id="textField" onAction="#handle" />
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+      <children>
+        <TextField fx:id="textField" onAction="#handle" />
+        <Button mnemonicParsing="false" onAction="#handle" text="Say Hello" />
+      </children>
+    </HBox>
     <Label fx:id="label" text="Hello, World!" />
   </children>
 </VBox>
