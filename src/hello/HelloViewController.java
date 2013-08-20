@@ -16,7 +16,7 @@ public class HelloViewController implements Initializable {
     
     @FXML
     private void handle(ActionEvent event) {
-        
+        label.setText("Hello, " + textField.getText() + "!");
     }
     
     @Override
