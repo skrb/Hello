@@ -20,12 +20,13 @@ public class HelloViewController implements Initializable {
     
     @FXML
     private void handle(ActionEvent event) {
-        label.setText("Hello, " + textField.getText() + "!");
+//        label.setText("Hello, " + textField.getText() + "!");
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         textField.maxWidthProperty().bind(Bindings.multiply(0.8, root.widthProperty()));
+        label.textProperty().bind(Bindings.concat("Hello, ", textField.textProperty(), "!"));
     }    
     
 }
